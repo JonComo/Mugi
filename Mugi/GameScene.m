@@ -8,18 +8,27 @@
 
 #import "GameScene.h"
 
+#import "Mugi.h"
+
+@interface GameScene ()
+
+@property (nonatomic, strong) Mugi *mugi;
+
+@end
+
 @implementation GameScene
 
--(void)didMoveToView:(SKView *)view {
-    /* Setup your scene here */
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+- (instancetype)initWithSize:(CGSize)size {
+    if (self = [super initWithSize:size]) {
+        //init
+        self.backgroundColor = [UIColor whiteColor];
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0.f, 0.f, size.width, size.height)];
+        //self.physicsWorld.gravity = CGVectorMake(0.f, 0.f);
+        
+        _mugi = [[Mugi alloc] initWithScene:self offset:CGPointMake(size.width/2.f, size.height/2.f)];
+    }
     
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 65;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
-    
-    [self addChild:myLabel];
+    return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -28,17 +37,6 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.xScale = 0.5;
-        sprite.yScale = 0.5;
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
     }
 }
 

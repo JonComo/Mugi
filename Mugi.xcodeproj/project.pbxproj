@@ -10,12 +10,12 @@
 		86CEAC311AE167B90065BC98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAC301AE167B90065BC98 /* main.m */; };
 		86CEAC341AE167B90065BC98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAC331AE167B90065BC98 /* AppDelegate.m */; };
 		86CEAC371AE167B90065BC98 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAC361AE167B90065BC98 /* GameScene.m */; };
-		86CEAC391AE167B90065BC98 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86CEAC381AE167B90065BC98 /* GameScene.sks */; };
 		86CEAC3C1AE167B90065BC98 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAC3B1AE167B90065BC98 /* GameViewController.m */; };
 		86CEAC3F1AE167B90065BC98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86CEAC3D1AE167B90065BC98 /* Main.storyboard */; };
 		86CEAC411AE167B90065BC98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CEAC401AE167B90065BC98 /* Images.xcassets */; };
 		86CEAC441AE167B90065BC98 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CEAC421AE167B90065BC98 /* LaunchScreen.xib */; };
 		86CEAC501AE167B90065BC98 /* MugiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAC4F1AE167B90065BC98 /* MugiTests.m */; };
+		86CEAC5B1AE16E420065BC98 /* Mugi.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CEAC5A1AE16E420065BC98 /* Mugi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		86CEAC331AE167B90065BC98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		86CEAC351AE167B90065BC98 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		86CEAC361AE167B90065BC98 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		86CEAC381AE167B90065BC98 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		86CEAC3A1AE167B90065BC98 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		86CEAC3B1AE167B90065BC98 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		86CEAC3E1AE167B90065BC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +44,8 @@
 		86CEAC491AE167B90065BC98 /* MugiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MugiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CEAC4E1AE167B90065BC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CEAC4F1AE167B90065BC98 /* MugiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MugiTests.m; sourceTree = "<group>"; };
+		86CEAC591AE16E420065BC98 /* Mugi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mugi.h; sourceTree = "<group>"; };
+		86CEAC5A1AE16E420065BC98 /* Mugi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mugi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +89,12 @@
 			children = (
 				86CEAC321AE167B90065BC98 /* AppDelegate.h */,
 				86CEAC331AE167B90065BC98 /* AppDelegate.m */,
-				86CEAC351AE167B90065BC98 /* GameScene.h */,
-				86CEAC361AE167B90065BC98 /* GameScene.m */,
-				86CEAC381AE167B90065BC98 /* GameScene.sks */,
 				86CEAC3A1AE167B90065BC98 /* GameViewController.h */,
 				86CEAC3B1AE167B90065BC98 /* GameViewController.m */,
+				86CEAC351AE167B90065BC98 /* GameScene.h */,
+				86CEAC361AE167B90065BC98 /* GameScene.m */,
+				86CEAC591AE16E420065BC98 /* Mugi.h */,
+				86CEAC5A1AE16E420065BC98 /* Mugi.m */,
 				86CEAC3D1AE167B90065BC98 /* Main.storyboard */,
 				86CEAC401AE167B90065BC98 /* Images.xcassets */,
 				86CEAC421AE167B90065BC98 /* LaunchScreen.xib */,
@@ -209,7 +211,6 @@
 			files = (
 				86CEAC441AE167B90065BC98 /* LaunchScreen.xib in Resources */,
 				86CEAC411AE167B90065BC98 /* Images.xcassets in Resources */,
-				86CEAC391AE167B90065BC98 /* GameScene.sks in Resources */,
 				86CEAC3F1AE167B90065BC98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CEAC5B1AE16E420065BC98 /* Mugi.m in Sources */,
 				86CEAC3C1AE167B90065BC98 /* GameViewController.m in Sources */,
 				86CEAC341AE167B90065BC98 /* AppDelegate.m in Sources */,
 				86CEAC371AE167B90065BC98 /* GameScene.m in Sources */,
