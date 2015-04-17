@@ -13,6 +13,7 @@
 @interface GameScene ()
 
 @property (nonatomic, strong) Mugi *mugi;
+@property (nonatomic, strong) SKPhysicsJointPin *dragJoint;
 
 @end
 
@@ -26,6 +27,7 @@
         //self.physicsWorld.gravity = CGVectorMake(0.f, 0.f);
         
         _mugi = [[Mugi alloc] initWithScene:self offset:CGPointMake(size.width/2.f, size.height/2.f)];
+        [_mugi.head.physicsBody applyAngularImpulse:1.f];
     }
     
     return self;
@@ -37,6 +39,16 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
+        NSArray *nodes = [self nodesAtPoint:location];
+        SKSpriteNode *nodeTouched = nil;
+        for (SKNode *node in nodes) {
+            if ([node isKindOfClass:[SKSpriteNode class]]) {
+                nodeTouched = (SKSpriteNode *)node;
+                continue;
+            }
+        }
+        
+
     }
 }
 
